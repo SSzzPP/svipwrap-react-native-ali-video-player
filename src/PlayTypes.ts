@@ -33,7 +33,7 @@ export type VideoPlayerProps = Omit<AliVideoViewProps, 'ref'> & {
   /**
    * 是否隐藏控制栏
    */
-  isHiddenController: boolean;
+  isHiddenController?: boolean;
   /**
    * 是否隐藏返回按钮
    */

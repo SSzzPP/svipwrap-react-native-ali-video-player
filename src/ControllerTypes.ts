@@ -18,7 +18,7 @@ export type ControllerViewProps = {
   /**
    * 是否隐藏控制栏
    */
-  isHiddenController: boolean;
+  isHiddenController?: boolean;
   isFull: boolean;
   isLandscape?: boolean;
   current: number;
