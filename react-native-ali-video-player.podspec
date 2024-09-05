@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.authors      = package["author"]
 
   s.platforms    = { :ios => "8.0" }
-  s.source       = { :git => "https://github.com/lvnini/react-native-ali-video-player.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/SSzzPP/svipwrap-react-native-ali-video-player.git", :tag => "#{s.version}" }
 
   s.source_files = "ios/**/*.{h,m,mm}"
   s.static_framework = true

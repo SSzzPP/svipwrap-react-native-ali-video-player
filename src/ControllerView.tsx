@@ -52,7 +52,7 @@ const ControllerView = ({
   selectBitrateIndex = 0,
   setSelectBitrateIndex,
   isHiddenBack = false,
-  isHiddenController = true,
+  isHiddenController = false,
   isHiddenFullBack = false,
 }: ControllerViewProps) => {
   const isMountRef = useRef(true);
@@ -385,7 +385,7 @@ const ControllerView = ({
           </View>
         )}
 
-        {isHiddenController && (
+        {!isHiddenController && (
           <ImageBackground
             source={imageBg}
             resizeMode="cover"

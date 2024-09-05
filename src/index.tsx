@@ -42,6 +42,7 @@ const VideoPlayer = forwardRef(
       onAliRenderingStart,
       onGetTiming,
       onGetSpeed,
+      isHiddenControllerView,
       isHiddenController,
       isHiddenBack,
       showTiming,
@@ -346,34 +347,36 @@ const VideoPlayer = forwardRef(
           {...rest}
           ref={videoRef}
         />
-        <ControllerView
-          title={title}
-          onPause={handlePause}
-          onPressedStart={onPressedStart}
-          onSliderValueChange={onSliderValueChange}
-          current={currentTime}
-          isFull={isFull}
-          isLandscape={isLandscape}
-          isHiddenController={isHiddenController}
-          onFull={onFull}
-          isHiddenBack={innerHiddenBack}
-          isHiddenFullBack={innerHiddenFullBack}
-          speed={innerSetSpeed}
-          setSpeed={onSetSpeed}
-          selectBitrateIndex={innerSelectBitrateIndex}
-          setSelectBitrateIndex={onSelectBitrateIndex}
-          videoList={videoList}
-          audioList={audioList}
-          buffer={buffer}
-          isError={false}
-          showTiming={showTiming}
-          isLoading={loading}
-          isStart={isPlaying}
-          total={duration}
-          onBack={onBack}
-          timing={timing}
-          setTiming={onTiming}
-        />
+        {!isHiddenControllerView && (
+          <ControllerView
+            title={title}
+            onPause={handlePause}
+            onPressedStart={onPressedStart}
+            onSliderValueChange={onSliderValueChange}
+            current={currentTime}
+            isFull={isFull}
+            isLandscape={isLandscape}
+            isHiddenController={isHiddenController}
+            onFull={onFull}
+            isHiddenBack={innerHiddenBack}
+            isHiddenFullBack={innerHiddenFullBack}
+            speed={innerSetSpeed}
+            setSpeed={onSetSpeed}
+            selectBitrateIndex={innerSelectBitrateIndex}
+            setSelectBitrateIndex={onSelectBitrateIndex}
+            videoList={videoList}
+            audioList={audioList}
+            buffer={buffer}
+            isError={false}
+            showTiming={showTiming}
+            isLoading={loading}
+            isStart={isPlaying}
+            total={duration}
+            onBack={onBack}
+            timing={timing}
+            setTiming={onTiming}
+          />
+        )}
       </View>
     );
   }
